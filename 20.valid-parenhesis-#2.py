@@ -4,8 +4,8 @@ class Solution(object):
         map = {'(':')', '{':'}','[':']'}
         stack = []
         for i in s:
-            if i in map:  # 1
+            if i in map: 
                 stack.append(i)
-            elif len(stack) == 0 or map[stack.pop()] != i:  # 2
+            elif len(stack) == 0 or map[stack.pop()] != i:
                 return False
-        return len(stack) == 0 # 3
+        return len(stack) == 0 
