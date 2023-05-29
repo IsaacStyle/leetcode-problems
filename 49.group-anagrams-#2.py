@@ -1,5 +1,7 @@
-def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-    letters_to_words = defaultdict(list)
-    for word in strs:
-        letters_to_words[tuple(sorted(word))].append(word)
-    return list(letters_to_words.values())
+def groupAnagrams(self, strs):
+        map = collections.defaultdict(list)
+
+        for i in strs:
+            map[tuple(sorted(i))].append(i)
+
+        return map.values()
